@@ -14,6 +14,7 @@ services:
     environment:
       - TZ="Asia/Shanghai"
     entrypoint: java -server -jar -Duser.timezone=Asia/Shanghai -Dserver.port=8080 -Dspring.profiles.active=prod /test.jar
+    network_mode: "host"
 
 # -server jvm 参数说明
 # -Xms：堆初始大小（默认为物理内存的1/64） -Xms256m
