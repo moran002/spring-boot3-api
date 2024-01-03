@@ -11,10 +11,10 @@ import tk.mybatis.spring.annotation.MapperScan;
  **/
 @SpringBootApplication
 @MapperScan("com.moran.mapper")
-public class Boot3Application {
+public class SpringBoot3ApiApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Boot3Application.class, args);
+        SpringApplication.run(SpringBoot3ApiApplication.class, args);
     }
 
 }
