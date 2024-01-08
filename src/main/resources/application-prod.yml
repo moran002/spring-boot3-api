@@ -2,7 +2,6 @@ logging:
   level:
     # 整个项目日志
     root: info
-
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver

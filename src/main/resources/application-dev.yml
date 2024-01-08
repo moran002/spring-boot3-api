@@ -1,8 +1,7 @@
 logging:
   level:
     # 整个项目日志
-    root: info
-  config: classpath:logback-${spring.profiles.active}.xml
+    root: debug
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
