@@ -1,24 +1,22 @@
-package com.moran;
+package com.moran.conf.plus;
 
 import com.baomidou.mybatisplus.generator.FastAutoGenerator;
 import com.baomidou.mybatisplus.generator.config.DataSourceConfig;
 import com.baomidou.mybatisplus.generator.config.OutputFile;
+import com.baomidou.mybatisplus.generator.config.TemplateType;
 import com.baomidou.mybatisplus.generator.config.rules.DateType;
+import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
 import com.baomidou.mybatisplus.generator.keywords.MySqlKeyWordsHandler;
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.Collections;
 
-@SpringBootTest
-class SpringBoot3ApiApplicationTests {
-
-    @Test
-    void contextLoads() {
-    }
-
-    @Test
-    void createTable() {
+/**
+ * @author : moran
+ * @date : 2024/1/15 14:39
+ */
+public class MybatisPlusGenerator {
+    public static void main(String[] args) {
+        System.out.println(System.getProperty("user.dir"));
         String property = System.getProperty("user.dir") + "/src/main";
         FastAutoGenerator.create(dataSourceConfig())
                 .globalConfig(builder -> {
@@ -41,13 +39,12 @@ class SpringBoot3ApiApplicationTests {
                 .strategyConfig(builder -> {
                     builder.addInclude("test");
                 })
-                .execute();
-
-
+                .templateEngine(new FreemarkerTemplateEngine())
+               .execute();
     }
 
-    private DataSourceConfig.Builder dataSourceConfig() {
-        return new DataSourceConfig.Builder("jdbc:mysql://localhost:3306/demo?serverTimezone=Asia/Shanghai&zeroDateTimeBehavior=convertToNull", "root", "xiyang")
+    private static DataSourceConfig.Builder dataSourceConfig() {
+        return new DataSourceConfig.Builder("jdbc:mysql://localhost:3306/test?serverTimezone=Asia/Shanghai&zeroDateTimeBehavior=convertToNull", "root", "xiyang")
                 .schema("mybatis-plus")
                 .keyWordsHandler(new MySqlKeyWordsHandler());
     }
