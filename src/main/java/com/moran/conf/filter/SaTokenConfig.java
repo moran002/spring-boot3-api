@@ -30,6 +30,6 @@ public class SaTokenConfig implements WebMvcConfigurer {
                             .check(r -> StpUtil.checkLogin()).stop();
                     throw new ServiceException("请登录");
                 })).addPathPatterns("/**")
-                .excludePathPatterns("/login","/test/**");
+                .excludePathPatterns("/login","/demo/**");
     }
 }

@@ -5,7 +5,7 @@ logging:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/test?serverTimezone=Asia/Shanghai&zeroDateTimeBehavior=convertToNull
+    url: jdbc:mysql://localhost:3306/demo?serverTimezone=Asia/Shanghai&zeroDateTimeBehavior=convertToNull
     username: root
     password: xiyang
     druid:

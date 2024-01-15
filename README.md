@@ -7,7 +7,7 @@ springboot3.0.0
 1. springboot3.1.5 
 2. mysql8.0.20 
 3. redis 
-4. tk.mapper 
+4. mybatis-plus
 5. jdk17 sa-token
 
 
@@ -19,7 +19,7 @@ springboot3.0.0
 5.  conf/redis : 添加了redis的配置并提供了redisService方便存储
 6.  conf/listener : 添加了redis 过期事件的监听
 7.  conf/exception: 添加了全局统一异常处理
-8.  conf/tk : 添加动态表名的实现
+8.  test/SpringBoot3ApiApplicationTests 生成表相关数据
 
 #### 部署相关
 1. docker 目录添加了服务器利用docker-compose 部署文件的相应配置文件
